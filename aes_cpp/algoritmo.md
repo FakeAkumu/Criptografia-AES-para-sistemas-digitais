@@ -4,7 +4,7 @@ Breve descrição sobre seu funcionamento para realização do trabalho
 ## Especificações do algoritmo
 Algoritmo de criptografia simétrico, com tamanho de bloco e chave variáveis, 128, 192 e 256 bits. Ele é rápido e enxuto.
 
-Resultado das operações é colocado numa matriz de estado, ua matriz retangular de bytes, 4 linhas e Nb (número de blocos) do tamanho do bloco, 128, 192, 256, dividido por 32
+Resultado das operações é colocado numa matriz de estado, uma matriz retangular de bytes, 4 linhas e Nb (número de blocos) do tamanho do bloco, 128, 192, 256, dividido por 32
 
 A cifra da chave também é uma matriz retangular de bits, com 4 linhas e Nk colunas pelo tamanho da chave, dividido por 32
 As colunas só podem assumir valores de 4, 6 ou 8
@@ -14,7 +14,7 @@ Tanto o vetor de entrada, quanto de saída é uma vetor de 4*Nb - 1 (esses bloco
 As transformações dos dados são feitas em rodadas por 4 operações: ByteSub, ShiftRow, MixColumn e AddRoundKey, com exceção da última rodada que usa apenas ByteSub, ShiftRow e AddRoundKey
 
 - Nk - Tamanho da chave
-- Nv - Tamanho do bloco
+- Nb - Tamanho do bloco
 - Nr - Número de rodadas
 
 | Algoritmo | Nk words | Nb words | Nr |
